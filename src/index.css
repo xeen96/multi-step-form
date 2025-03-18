@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-custom-purple-100: #845EEE4D;
+  --color-custom-purple-200: #845EEE;
+  --color-custom-purple-300: #5425AF;
+  --color-custom-white: #E5E7EB;
+  --color-main-bg: #121826;
+  --color-form: #212936;
+  --color-def-input: #4D5562;
+  --color-step-bg: #394150;
+  --color-step-outline: #845EEE4D;
+  --color-step-text: #A1A1A9;
+}
+
+@theme {
+  --animate-shake: shake 0.5s ease-in-out;
+
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    10%, 90% { transform: translateX(-10px); }
+    20%, 80% { transform: translateX(10px); }
+    30%, 50%, 70% { transform: translateX(-5px); }
+    40%, 60% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+  }
+}
+
+input[type="checkbox"]::after {
+  content: "✓";
+  @apply relative flex items-center place-content-center text-custom-white text-center w-full h-full opacity-0;
+}
+input[type="checkbox"]:checked::after {
+  @apply opacity-100;
+}
