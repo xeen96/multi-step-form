@@ -50,7 +50,7 @@ const Form = () => {
   return (
     <StepContext.Provider value={step}>
     <div className="bg-main-bg h-dvh min-h-dvh flex flex-col justify-center items-center text-custom-white">
-      <div className="h-3/6 sm:h-2/5 lg:h-2/5 2xl:h-2/5 w-4/5 sm:w-3/7 lg:w-3/8 2xl:w-2/7 block rounded-2xl overflow-clip">
+      <div className="h-4/5 sm:h-3/5 lg:h-3/5 2xl:h-3/5 w-4/5 sm:w-3/6 lg:w-3/8 2xl:w-2/7 block rounded-2xl overflow-clip">
         {step === 1 && <StepOne handleNextStep={handleNextStep} handleInput={handleInput} />}
         {step === 2 && <StepTwo handleNextStep={handleNextStep} handleChecked={handleChecked} topics={topics} />}
         {step === 3 && <StepThree handleNextStep={handleNextStep} name={name} email={email} topics={topics} />}
